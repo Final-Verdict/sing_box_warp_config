@@ -67,54 +67,6 @@
             "mtu": 1280
         },
         {
-            "tag": "direct",
-            "type": "direct"
-        },
-        {
-            "tag": "block",
-            "type": "block"
-        },
-        {
-            "tag": "dns-out",
-            "type": "dns"
-        },
-        {
-            "tag": "\ud83d\udc9aselect\ud83d\udc9a",
-            "type": "selector",
-            "outbounds": [
-                "\u2764\ufe0fBest Latency\u2764\ufe0f",
-                "Warp-IR",
-                "Warp-IR_1",
-                "Warp-IR_2",
-                "Warp-IR_3",
-                "Warp-IR_4",
-                "Warp-IR_5",
-                "Warp-IR_6",
-                "Warp-IR_7",
-                "Warp-IR_8",
-                "Warp-IR_9"
-            ]
-        },
-        {
-            "tag": "\u2764\ufe0fBest Latency\u2764\ufe0f",
-            "type": "urltest",
-            "outbounds": [
-                "Warp-IR",
-                "Warp-IR_1",
-                "Warp-IR_2",
-                "Warp-IR_3",
-                "Warp-IR_4",
-                "Warp-IR_5",
-                "Warp-IR_6",
-                "Warp-IR_7",
-                "Warp-IR_8",
-                "Warp-IR_9"
-            ],
-            "url": "https://detectportal.firefox.com/success.txt",
-            "interval": "60s",
-            "tolerance": 0
-        },
-        {
             "type": "wireguard",
             "tag": "Warp-IR_1",
             "local_address": [
@@ -258,6 +210,55 @@
             "pre_shared_key": "",
             "mtu": 1280
         }
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        },
+        {
+            "tag": "\ud83d\udc9aselect\ud83d\udc9a",
+            "type": "selector",
+            "outbounds": [
+                "\u2764\ufe0fBest Latency\u2764\ufe0f",
+                "Warp-IR",
+                "Warp-IR_1",
+                "Warp-IR_2",
+                "Warp-IR_3",
+                "Warp-IR_4",
+                "Warp-IR_5",
+                "Warp-IR_6",
+                "Warp-IR_7",
+                "Warp-IR_8",
+                "Warp-IR_9"
+            ]
+        },
+        {
+            "tag": "\u2764\ufe0fBest Latency\u2764\ufe0f",
+            "type": "urltest",
+            "outbounds": [
+                "Warp-IR",
+                "Warp-IR_1",
+                "Warp-IR_2",
+                "Warp-IR_3",
+                "Warp-IR_4",
+                "Warp-IR_5",
+                "Warp-IR_6",
+                "Warp-IR_7",
+                "Warp-IR_8",
+                "Warp-IR_9"
+            ],
+            "url": "https://detectportal.firefox.com/success.txt",
+            "interval": "60s",
+            "tolerance": 0
+        },
+        
     ],
     "route": {
         "geoip": {
