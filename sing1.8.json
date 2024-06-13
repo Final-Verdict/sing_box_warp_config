@@ -51,154 +51,6 @@
   },
   "outbounds": [
     {
-      "packet_encoding": "",
-      "server": "104.31.16.60",
-      "server_port": 443,
-      "tls": {
-        "alpn": [
-          "h3"
-        ],
-        "enabled": true,
-        "insecure": true,
-        "server_name": "rubylifepool.etemadvip.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "early_data_header_name": "Sec-WebSocket-Protocol",
-        "headers": {
-          "Host": "rubylifepool.etemadvip.workers.dev"
-        },
-        "max_early_data": 2048,
-        "path": "/",
-        "type": "ws"
-      },
-      "uuid": "f939d0ef-1f24-431b-b0c9-69c297b2e947",
-      "type": "vless",
-      "domain_strategy": "",
-      "tag": "worker 1️⃣"
-    },
-    {
-      "packet_encoding": "xudp",
-      "server": "198.41.216.11",
-      "server_port": 2087,
-      "tls": {
-        "alpn": [
-          "h3"
-        ],
-        "enabled": true,
-        "insecure": true,
-        "server_name": "rubylifepool.etemadvip.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      },
-      "transport": {
-        "early_data_header_name": "Sec-WebSocket-Protocol",
-        "headers": {
-          "Host": "rubylifepool.etemadvip.workers.dev"
-        },
-        "max_early_data": 2048,
-        "path": "/",
-        "type": "ws"
-      },
-      "uuid": "f939d0ef-1f24-431b-b0c9-69c297b2e947",
-      "type": "vless",
-      "domain_strategy": "",
-      "tag": "worker 2️⃣"
-    },
-    {
-      "packet_encoding": "",
-      "server": "172.67.59.190",
-      "server_port": 443,
-      "tls": {
-        "alpn": [
-          "h3"
-        ],
-        "enabled": true,
-        "insecure": true,
-        "server_name": "rubylifepool.etemadvip.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      },
-      "transport": {
-        "early_data_header_name": "Sec-WebSocket-Protocol",
-        "headers": {
-          "Host": "rubylifepool.etemadvip.workers.dev"
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "uuid": "f939d0ef-1f24-431b-b0c9-69c297b2e947",
-      "type": "vless",
-      "domain_strategy": "",
-      "tag": "worker 3️⃣"
-    },
-    {
-      "packet_encoding": "",
-      "server": "104.31.16.60",
-      "server_port": 443,
-      "tls": {
-        "alpn": [
-          "h3"
-        ],
-        "enabled": true,
-        "insecure": true,
-        "server_name": "rubylifepool.etemadvip.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "early_data_header_name": "Sec-WebSocket-Protocol",
-        "headers": {
-          "Host": "rubylifepool.etemadvip.workers.dev"
-        },
-        "max_early_data": 2048,
-        "path": "/",
-        "type": "ws"
-      },
-      "uuid": "f939d0ef-1f24-431b-b0c9-69c297b2e947",
-      "type": "vless",
-      "domain_strategy": "",
-      "tag": "worker 4️⃣"
-    },
-    {
-      "packet_encoding": "",
-      "server": "198.41.216.11",
-      "server_port": 2087,
-      "tls": {
-        "alpn": [
-          "h3"
-        ],
-        "enabled": true,
-        "insecure": true,
-        "server_name": "rubylifepool.etemadvip.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "early_data_header_name": "Sec-WebSocket-Protocol",
-        "headers": {
-          "Host": "rubylifepool.etemadvip.workers.dev"
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "uuid": "f939d0ef-1f24-431b-b0c9-69c297b2e947",
-      "type": "vless",
-      "domain_strategy": "",
-      "tag": "worker 5️⃣"
-    },
-    {
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
@@ -263,11 +115,6 @@
       "type": "selector",
       "outbounds":[
         "❤️Best Latency❤️",
-        "worker 1️⃣",
-        "worker 2️⃣",
-        "worker 3️⃣",
-        "worker 4️⃣",
-        "worker 5️⃣",
         "عمو وایرگارد1️⃣",
         "عمو وایرگارد2️⃣",
         "عمو وایرگارد3️⃣"
@@ -277,11 +124,6 @@
       "tag": "❤️Best Latency❤️",
       "type": "urltest",
       "outbounds":[
-        "worker 1️⃣",
-        "worker 2️⃣",
-        "worker 3️⃣",
-        "worker 4️⃣",
-        "worker 5️⃣",
         "عمو وایرگارد1️⃣",
         "عمو وایرگارد2️⃣",
         "عمو وایرگارد3️⃣"
