@@ -1,138 +1,300 @@
 {
-  "log": {
-    "disabled": false,
-    "level": "info",
-    "timestamp": true
-  },
+    "log": {
+        "disabled": false,
+        "level": "info",
+        "timestamp": true
+    },
     "dns": {
-    "independent_cache": true,
-    "rules": [],
-    "servers": [
-      {
-        "address": "https://8.8.8.8/dns-query",
-        "address_resolver": "dns-direct",
-        "strategy": "ipv4_only",
-        "tag": "dns-remote"
-      },
-      {
-        "address": "local",
-        "address_resolver": "dns-local",
-        "detour": "direct",
-        "strategy": "ipv4_only",
-        "tag": "dns-direct"
-      },
-      {
-        "address": "local",
-        "detour": "direct",
-        "tag": "dns-local"
-      },
-      {
-        "address": "rcode://success",
-        "tag": "dns-block"
-      }
-    ]
-  },
-      "inbounds": [
-    {
-      "type": "tun",
-      "inet4_address": "172.19.0.1/30",
-      "inet6_address": "fdfe:dcba:9876::1/126",
-      "auto_route": true,
-      "strict_route": true,
-      "stack": "mixed",
-      "sniff": true
+        "independent_cache": true,
+        "rules": [],
+        "servers": [
+            {
+                "address": "https://8.8.8.8/dns-query",
+                "address_resolver": "dns-direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "local",
+                "address_resolver": "dns-local",
+                "detour": "direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "local",
+                "detour": "direct",
+                "tag": "dns-local"
+            },
+            {
+                "address": "rcode://success",
+                "tag": "dns-block"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "fdfe:dcba:9876::1/126",
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "mixed",
+            "sniff": true
+        }
+    ],
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "path": "cache.db"
+        }
+    },
+    "outbounds": [
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "162.159.192.0",
+            "server_port": 1070,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR"
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        },
+        {
+            "tag": "\ud83d\udc9aselect\ud83d\udc9a",
+            "type": "selector",
+            "outbounds": [
+                "\u2764\ufe0fBest Latency\u2764\ufe0f",
+                "Warp-IR",
+                "Warp-IR_1",
+                "Warp-IR_2",
+                "Warp-IR_3",
+                "Warp-IR_4",
+                "Warp-IR_5",
+                "Warp-IR_6",
+                "Warp-IR_7",
+                "Warp-IR_8",
+                "Warp-IR_9"
+            ]
+        },
+        {
+            "tag": "\u2764\ufe0fBest Latency\u2764\ufe0f",
+            "type": "urltest",
+            "outbounds": [
+                "Warp-IR",
+                "Warp-IR_1",
+                "Warp-IR_2",
+                "Warp-IR_3",
+                "Warp-IR_4",
+                "Warp-IR_5",
+                "Warp-IR_6",
+                "Warp-IR_7",
+                "Warp-IR_8",
+                "Warp-IR_9"
+            ],
+            "url": "https://detectportal.firefox.com/success.txt",
+            "interval": "60s",
+            "tolerance": 0
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "162.159.192.205",
+            "server_port": 1010,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_1"
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "188.114.97.208",
+            "server_port": 1010,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_2"
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "162.159.195.246",
+            "server_port": 1010,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_3"
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "188.114.96.180",
+            "server_port": 3581,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_4"
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "162.159.195.144",
+            "server_port": 1010,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_5"
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "188.114.97.63",
+            "server_port": 1010,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_6"
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "188.114.99.200",
+            "server_port": 3581,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_7"
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "188.114.97.205",
+            "server_port": 3581,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_8"
+        },
+        {
+            "local_address": [
+                "172.16.0.2/32",
+                "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
+            ],
+            "mtu": 1280,
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "pre_shared_key": "",
+            "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
+            "reserved": "vedv",
+            "server": "162.159.195.52",
+            "server_port": 1010,
+            "type": "wireguard",
+            "domain_strategy": "",
+            "tag": "Warp-IR_9"
+        }
+    ],
+    "route": {
+        "geoip": {
+            "download_url": "https://mirror.ghproxy.com/https://github.com/Ptechgithub/sing-box/blob/main/geo/geoip.db",
+            "download_detour": "\ud83d\udc9aselect\ud83d\udc9a"
+        },
+        "geosite": {
+            "download_url": "https://mirror.ghproxy.com/https://github.com/Ptechgithub/sing-box/blob/main/geo/geosite.db",
+            "download_detour": "\ud83d\udc9aselect\ud83d\udc9a"
+        },
+        "auto_detect_interface": true,
+        "final": "\ud83d\udc9aselect\ud83d\udc9a",
+        "rules": [
+            {
+                "outbound": "dns-out",
+                "protocol": "dns"
+            },
+            {
+                "clash_mode": "Direct",
+                "outbound": "direct"
+            },
+            {
+                "clash_mode": "Global",
+                "outbound": "\ud83d\udc9aselect\ud83d\udc9a"
+            },
+            {
+                "geosite": "ir",
+                "geoip": [
+                    "ir",
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": "geolocation-!ir",
+                "outbound": "\ud83d\udc9aselect\ud83d\udc9a"
+            }
+        ]
     }
-  ],
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "cache.db"
-    }
-  },
-  "outbounds": [
-    {
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8988:c1ee:9e0a:cd47:ac4a/128"
-      ],
-      "mtu": 1280,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "pre_shared_key": "",
-      "private_key": "qNSfNi2ZMZQXeif/BpC9xjh/nje/NBifogRXCRGv4lc=",
-      "reserved": "vedv",
-      "server": "162.159.192.0",
-      "server_port": 1070,
-      "type": "wireguard",
-      "domain_strategy": "",
-      "tag": "Warp-IR1"
-    },
-    {
-      "tag": "direct",
-      "type": "direct"
-    },
-    {
-      "tag": "block",
-      "type": "block"
-    },
-    {
-      "tag": "dns-out",
-      "type": "dns"
-    },
-    {
-      "tag": "💚select💚",
-      "type": "selector",
-      "outbounds":[
-        "❤️Best Latency❤️",
-        "Warp-IR1"
-      ]
-    },
-    {
-      "tag": "❤️Best Latency❤️",
-      "type": "urltest",
-      "outbounds":[
-        "Warp-IR1"
-      ],
-      "url": "https://detectportal.firefox.com/success.txt",
-      "interval": "60s",
-      "tolerance": 0
-    }
-  ],
-  "route": {
-      "geoip": {
-      "download_url": "https://mirror.ghproxy.com/https://github.com/Ptechgithub/sing-box/blob/main/geo/geoip.db",
-      "download_detour": "💚select💚"
-    },
-    "geosite": {
-      "download_url": "https://mirror.ghproxy.com/https://github.com/Ptechgithub/sing-box/blob/main/geo/geosite.db",
-      "download_detour": "💚select💚"
-    },
-    "auto_detect_interface": true,
-    "final": "💚select💚",
-    "rules": [
-      {
-        "outbound": "dns-out",
-        "protocol": "dns"
-      },
-      {
-        "clash_mode": "Direct",
-        "outbound": "direct"
-      },
-      {
-        "clash_mode": "Global",
-        "outbound": "💚select💚"
-      },
-      {
-        "geosite": "ir",
-        "geoip": [
-          "ir",
-          "private"
-        ],
-        "outbound": "direct"
-      },
-      {
-        "geosite": "geolocation-!ir",
-        "outbound": "💚select💚"
-      }
-    ]
-  }
 }
