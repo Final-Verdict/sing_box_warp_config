@@ -257,7 +257,7 @@
             "url": "https://detectportal.firefox.com/success.txt",
             "interval": "60s",
             "tolerance": 0
-        },
+        }
         
     ],
     "route": {
