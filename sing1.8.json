@@ -52,7 +52,7 @@
   "outbounds": [
     {
             "type": "wireguard",
-            "tag": "warp-out",
+            "tag": "Warp-IR",
             "local_address": [
                 "10.0.0.1/32"
             ],
