@@ -209,7 +209,7 @@
             "domain_strategy": "",
             "pre_shared_key": "",
             "mtu": 1280
-        }
+        },
         {
             "tag": "direct",
             "type": "direct"
