@@ -147,7 +147,7 @@
                 "Warp-IR_9",
                 "Warp-Main_9"
             ],
-            "url": "https://detectportal.firefox.com/success.txt",
+            "url": "http://www.gstatic.com/generate_204",
             "interval": "60s",
             "tolerance": 0
         },
